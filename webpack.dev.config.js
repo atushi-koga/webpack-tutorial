@@ -7,7 +7,7 @@ module.exports = {
         path: path.resolve(__dirname, "./dist"),
         publicPath: "dist/"
     },
-    mode: "none",
+    mode: "development",
     module: {
         rules: [
             {test: /\.(png|jpg)$/, use: ['file-loader']},
