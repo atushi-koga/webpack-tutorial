@@ -5,9 +5,15 @@ module.exports = {
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "./dist"),
-        publicPath: "dist/"
+        publicPath: ""
     },
     mode: "development",
+    devServer: {
+        contentBase: path.resolve(__dirname, "./dist"),
+        index: 'index.html',
+        port: 9000,
+        open: true
+    },
     module: {
         rules: [
             {test: /\.(png|jpg)$/, use: ['file-loader']},
