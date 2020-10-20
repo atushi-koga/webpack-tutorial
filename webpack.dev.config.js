@@ -4,15 +4,14 @@ module.exports = {
     entry: './src/index.js',
     output: {
         filename: "bundle.js",
-        path: path.resolve(__dirname, "./dist"),
-        publicPath: ""
+        path: path.resolve(__dirname, "dist"),
+        publicPath: "/dist"
     },
     mode: "development",
     devServer: {
-        contentBase: path.resolve(__dirname, "./dist"),
+        contentBase: './',
         index: 'index.html',
-        port: 9000,
-        open: true
+        port: 9000
     },
     module: {
         rules: [
